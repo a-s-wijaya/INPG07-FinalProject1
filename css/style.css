@@ -1,0 +1,210 @@
+body{
+	padding: 0;
+	margin: 0;
+	background:#f4f4f4;
+}
+html,h1,h2,h3,h4,h5,h6,a{
+	font-family: "Raleway";
+}
+.navbar-nav a{
+	color: #f4f4f4;
+}
+.navbar{
+	background:#212529d0;
+}
+.nav-link , .navbar-brand{
+	color: #f4f4f4;
+	cursor: pointer;
+}
+.nav-link{
+	margin-right: 1em !important;
+}
+.nav-link:hover{
+	background: #f4f4f4;
+	color: #f97300;
+}
+.navbar-collapse{
+ justify-content: flex-end;
+}
+.navbar-toggler{
+  background:#fff !important;
+}
+.header{
+	position: relative;
+	background-image: url('../images/Abstract\ 01.jpg');
+	
+	background-size: cover;
+	background-position: center;
+}
+.overlay{
+	position: absolute;
+	min-height: 100%;
+	min-width: 100%;
+	left: 0;
+	top: 0;
+	background: rgba(244, 244, 244, 0.164);
+}
+.description{
+    position: relative;
+    top: 30%;
+    margin: auto;
+    padding: 13em;
+
+}
+.description h1{
+	color:#ffc107 ;
+}
+.description p{
+	color:rgb(226, 224, 224);
+	font-size: 20px;
+	width: 50%;
+	line-height: 1.5;
+}
+.description button{
+	border:1px  solid #ffc107;
+	background:#ffc107;
+	color:#fff;
+}
+.about{
+	position: relative;
+	background-image: url('../images/Abstract\ 01.jpg');
+	
+	background-size: cover;
+	background-position: center;
+}
+.about h1{
+	color:#ffc107;
+	padding: 2em;
+}
+.about img{
+	height: 100%;
+    width: 100%;
+    border-radius: 50%;
+	padding-bottom: 3em;
+}
+.about span{
+	display: block;
+	color: rgb(219, 209, 209);
+	position: absolute;
+	left: 115px;
+}
+.about .desc{
+	padding: 2em;
+	border-left:4px solid #2536cf;
+}
+.about .desc h3{
+	color: #ffc107;
+}
+.about .desc p{
+	line-height:2;
+	color:white;
+	padding-bottom: 3em;
+}
+
+.Portofolio{
+	background-image: url('../images/Abstract\ 01.jpg');
+	
+	background-size: cover;
+	background-position: center;
+    position: relative;	
+}
+.Portofolio h1{
+	color:#ffc107;
+}
+.Portofolio p{
+	color:rgb(7, 7, 7);
+	font-size: 20px;
+	width: 50%;
+	line-height: 1.5;
+}
+.Portofolio img{
+	 height: 15rem;
+	 width: 100%;
+	 margin: 1em;
+}
+.blog{
+    position: relative;
+	background-image: url('../images/Abstract\ 01.jpg');
+	
+	background-size: cover;
+	background-position: center;	
+}
+.blog h1{
+		color:#ffc107;
+		margin-bottom: 0em;	
+		text-align: center;
+}
+.blog .print{
+	color:white;
+	font-size: 20px;
+	text-align: center;
+}
+.team{
+	position: relative;
+	background-image: url('../images/Abstract\ 01.jpg');
+	
+	background-size: cover;
+	background-position: center;
+}
+.team h1{
+	color:#ffc107;
+	margin-bottom: 2em;	
+}
+.team .item{
+	position: relative;
+	overflow: hidden;	
+}
+.team .des{
+	background: #ffc107;
+	color: rgb(255, 253, 253);
+	text-align: center;
+	border-top-right-radius: 93%;
+	transition:.4s ease-in-out;
+	position: absolute;
+
+}
+.team .item:hover .des{
+	height: 100%;
+	background:#ffc107;
+    position: absolute;
+	width: 89%;
+	padding: 5em;
+	top: 0;
+	border-top-right-radius: 0;
+}
+.text-justify{
+	color: #f4f4f4;
+}
+.contact-form{
+	position: relative;	
+	background-image: url('../images/Abstract\ 01.jpg');
+	
+	background-size: cover;
+	background-position: center;	
+}
+
+.contact-form h1{
+	padding:2em 1px;
+	color: #ffc107; 
+}
+.contact-form .right{
+	max-width: 600px;
+}
+.contact-form .right .btn-secondary{
+	background:  #ffc107;
+	color: #fff;
+	border:0;
+}
+.contact-form .right .form-control::placeholder{
+	color: #888;
+}
+.desct h1{
+		color:#ffc107;
+		margin-bottom: 0em;	
+		text-align: center;
+}
+.desct p{
+	color:#f4f4f4;
+	font-size: 28px;
+	text-align: center;
+}
