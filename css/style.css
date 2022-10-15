@@ -20,8 +20,8 @@ html,h1,h2,h3,h4,h5,h6,a{
 	margin-right: 1em !important;
 }
 .nav-link:hover{
-	background: #f4f4f4;
-	color: #f97300;
+	background: #f4f4f4 !important;
+	color: black !important;
 }
 .navbar-collapse{
  justify-content: flex-end;
@@ -207,4 +207,9 @@ html,h1,h2,h3,h4,h5,h6,a{
 	color:#f4f4f4;
 	font-size: 28px;
 	text-align: center;
+}
+@media screen and (max-width: 920px){
+	.nav-link{
+		padding-left: 20px !important
+	}	
 }
