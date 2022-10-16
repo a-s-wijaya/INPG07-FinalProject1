@@ -6,8 +6,7 @@
     <title>Final Project 1</title>
     <link rel="stylesheet" href="css/style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous">
 </head>
 <body class="bg-dark">
     <nav class="navbar navbar-expand-lg bg-dark">
@@ -19,7 +18,7 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link text-warning"style="text-white" href="About.html">About</a>
+                        <a class="nav-link text-warning" href="About.html">About</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link text-warning" href="Protofolio.html">Portofolio</a>
@@ -28,7 +27,7 @@
                         <a class="nav-link text-warning" href="Blog.html">Blog</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-warning" href="Teams.html">Teams</a>
+                        <a class="nav-link text-dark bg-warning rounded" href="Teams.html">Teams</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link text-warning" href="Contact.html">Contact</a>
@@ -40,30 +39,50 @@
             </div>
         </div>
     </nav>
-    <div class="team" id="team">
-        <div class="overlay"></div>
+    
+    <div class="team p-5" id="team">
         <div class="container">
-            <h1 class="text-center">Our Team</h1>
+            <h1 class="text-center mb-5">Our Team</h1>
             <div class="row">
                 <div class="col-lg-6 col-md-6 col-sm-12 item">
-                    <img src="images/Teams/dev 1.png" class="img-fluid" alt="team">
-                    <div class="des">
-                        Dzikri JOIN Company
-                        Asal Tegal
+                    <div class="card bg-dark text-warning text-center">
+                        <img src="images/Teams/dev1.png" class=" rounded-circle mx-auto p-3 m-2" alt="team" width="250">
+                        <div class="col my-auto">
+                            <div class="card-body">
+                                <h5 class="card-title">Dzikri</h5>
+                                <p class="card-text text-muted"><small>Tegal</small></p>
+                                <ul class="list-group">
+                                    <li class="list-group-item bg-dark border-warning text-white">Create Home Page</li>
+                                    <li class="list-group-item bg-dark border-warning text-white">Create About Page</li>
+                                    <li class="list-group-item bg-dark border-warning text-white">Create Portfolio Page</li>
+                                    <li class="list-group-item bg-dark border-warning text-white">Create Blog Page</li>
+                                    <li class="list-group-item bg-dark border-warning text-white">Create Teams Page</li>
+                                    <li class="list-group-item bg-dark border-warning text-white">Create Contact Page</li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
-                    <span class="text-justify">5 section</span>
                 </div>
                 <div class="col-lg-6 col-md-6 col-sm-12 item">
-                    <img src="images/Teams/dev 1.png" class="img-fluid" alt="team">
-                    <div class="des">
-                        Ian JOIN Company
-                        Asal Bekasi 
+                    <div class="card bg-dark text-warning text-center">
+                        <img src="images/Teams/dev1.png" class=" rounded-circle mx-auto p-3 m-2" alt="team" width="250">
+                        <div class="col my-auto">
+                            <div class="card-body">
+                                <h5 class="card-title">Ian</h5>
+                                <p class="card-text text-muted"><small>Bekasi</small></p>
+                                <ul class="list-group">
+                                    <li class="list-group-item bg-dark border-warning text-white">Create Todos Page</li>
+                                    <li class="list-group-item bg-dark border-warning text-white">Create Pop Up for Home Page</li>
+                                    <li class="list-group-item bg-dark border-warning text-white">Finishing</li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
-                    <span class="text-justify">Popup dan todos</span>
                 </div>
             </div>
         </div>
     </div>
+    
     <footer class="bg-dark text-white pt-5 pb-4">
         <div class="container text-justify text-md-left">
             <div class="row text-justify text-md-left">
@@ -123,30 +142,33 @@
                         <p>Copy right ©2022 all right by:
                             <a href="#" style="text-decoration: none;">
                                 <strong class="text-warning">JOIN Company</strong>
-                            </a></p>
-                        </div>
-                        
-                        <div class="col-md-5 col-lg-4">
-                            <div class="text-center text-md-right">
-                                <ul class="list-unstyled list-inline ">
-                                    <li class="list-inline-item"> 
-                                        <a href="#" class="btn-floating btn-sm text-white" style="font: size 23px; ;"> <i class="fab fa-facebook"></i></a>
-                                    </li>
-                                    <li class="list-inline-item"> 
-                                        <a href="#" class="btn-floating btn-sm text-white" style="font: size 23px; ;"> <i class="fab fa-twitter"></i></a>
-                                    </li>
-                                    <li class="list-inline-item"> 
-                                        <a href="#" class="btn-floating btn-sm text-white" style="font: size 23px; ;"> <i class="fab fa-youtube"></i></a>
-                                    </li>
-                                    <li class="list-inline-item"> 
-                                        <a href="#" class="btn-floating btn-sm text-white" style="font: size 23px; ;"> <i class="fab fa-linkedin"></i></a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
+                            </a>
+                        </p>
                     </div>
                     
+                    <div class="col-md-5 col-lg-4">
+                        <div class="text-center text-md-right">
+                            <ul class="list-unstyled list-inline ">
+                                <li class="list-inline-item"> 
+                                    <a href="#" class="btn-floating btn-sm text-white"> <i class="fab fa-facebook"></i></a>
+                                </li>
+                                <li class="list-inline-item"> 
+                                    <a href="#" class="btn-floating btn-sm text-white"> <i class="fab fa-twitter"></i></a>
+                                </li>
+                                <li class="list-inline-item"> 
+                                    <a href="#" class="btn-floating btn-sm text-white"> <i class="fab fa-youtube"></i></a>
+                                </li>
+                                <li class="list-inline-item"> 
+                                    <a href="#" class="btn-floating btn-sm text-white"> <i class="fab fa-linkedin"></i></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
-            </footer>
-        </body>
-        </html>
+            </div>
+        </div>
+    </footer>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>

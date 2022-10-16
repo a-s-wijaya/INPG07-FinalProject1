@@ -82,7 +82,7 @@ function editTask(event) {
     }
     tasks.forEach(task => {
         if (task.task === event.value) {
-            alert("Task already exist!");
+            alert("Nothing changed");
             event.value = currentTask;
             return;
         }
