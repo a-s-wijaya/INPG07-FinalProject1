@@ -1,51 +1,96 @@
-var inputTodo = document.getElementById('todoInput');
-inputTodo.addEventListener('keydown', function(e){
-    if(e.code === 'Enter'){
-        if(inputTodo.value == ''){
-            alert('You need to input something');
-        } else {
-            document.getElementById('todo').innerHTML += `
-            <div class='row align-items-center my-1 border-top py-2 px-3 mx-2 rounded'>
-            <div class='col-1'>
-            <input type='checkbox' class='form-check-input' id='checkTodo'>
-            </div>
-            <div class='col-10'>
-            <p class='my-auto' id='whatToDo'>${inputTodo.value}</p>
-            </div>
-            <div class='col-1'>
-            <button class='btn btn-warning' id="todoDelete"><i class="fa fa-trash"></i></button>
-            </div>
-            </div>
-            `;
-            
-            inputTodo.value = '';
-            
-            var deleteBtn = document.querySelectorAll('#todoDelete');
-            for(var i=0; i<deleteBtn.length; i++){
-                deleteBtn[i].addEventListener('click', function(){
-                    this.parentElement.parentElement.remove();
-                });
-            }
-            
-            
-            var checkTodo = document.querySelectorAll('#checkTodo');
-            for(var i=0; i<checkTodo.length; i++){
-                checkTodo[i].addEventListener('click', function(){
-                    if(this.checked){
-                        this.parentElement.parentElement.classList.add('bg-warning');
-                        this.parentElement.parentElement.classList.add('text-dark');
-                        this.parentElement.parentElement.children[2].children[0].classList.add('bg-dark');
-                        this.parentElement.parentElement.children[2].children[0].classList.add('text-warning');
-                        this.parentElement.nextElementSibling.firstElementChild.style.textDecoration = 'line-through';
-                    } else {
-                        this.parentElement.parentElement.classList.remove('bg-warning');
-                        this.parentElement.parentElement.classList.remove('text-dark');
-                        this.parentElement.parentElement.children[2].children[0].classList.remove('bg-dark');
-                        this.parentElement.parentElement.children[2].children[0].classList.remove('text-warning');
-                        this.parentElement.nextElementSibling.firstElementChild.style.textDecoration = 'none';
-                    }
-                });
-            }
-        }
+window.onload = loadTasks;
+
+document.querySelector("form").addEventListener("submit", e => {
+    e.preventDefault();
+    addTask();
+});
+
+function loadTasks() {
+    if (localStorage.getItem("tasks") == null) return;
+    
+    let tasks = Array.from(JSON.parse(localStorage.getItem("tasks")));
+    
+    tasks.forEach(task => {
+        const list = document.getElementById('todoList');
+        const li = document.createElement("li");
+        li.className = 'my-auto mb-2 rounded pb-3 ' + (task.completed ? 'bg-warning' : '');
+        li.innerHTML = `<input type="checkbox" onclick="taskComplete(this)" class="check" ${task.completed ? 'checked' : ''}>
+        <input type="text" value="${task.task}" class="task mt-2 ${task.completed ? 'completed' : ''}" onfocus="getCurrentTask(this)" onblur="editTask(this)">
+        <i class="fa fa-trash mt-2 btn btn-danger text-white" onclick="removeTask(this)"></i>`;
+        list.insertBefore(li, list.children[0]);
+    });
+}
+
+function addTask() {
+    const task = document.querySelector("form input");
+    const list = document.getElementById('todoList');
+    if (task.value === "") {
+        alert("Please add some task!");
+        return false;
     }
-})
+    if (document.querySelector(`input[value="${task.value}"]`)) {
+        alert("Task already exist!");
+        return false;
+    }
+    
+    localStorage.setItem("tasks", JSON.stringify([...JSON.parse(localStorage.getItem("tasks") || "[]"), { task: task.value, completed: false }]));
+    
+    const li = document.createElement("li");
+    li.className = 'my-auto mb-2 rounded pb-3';
+    li.innerHTML = `<input type="checkbox" onclick="taskComplete(this)" class="check">
+    <input type="text" value="${task.value}" class="task mt-2" onfocus="getCurrentTask(this)" onblur="editTask(this)">
+    <i class="fa fa-trash mt-2 btn btn-danger text-white" onclick="removeTask(this)"></i>`;
+    list.insertBefore(li, list.children[0]);
+    task.value = "";
+}
+
+function taskComplete(event) {
+    let tasks = Array.from(JSON.parse(localStorage.getItem("tasks")));
+    tasks.forEach(task => {
+        if (task.task === event.nextElementSibling.value) {
+            task.completed = !task.completed;
+        }
+    });
+    localStorage.setItem("tasks", JSON.stringify(tasks));
+    event.nextElementSibling.classList.toggle("completed");
+    event.parentElement.classList.toggle("bg-warning");
+}
+
+function removeTask(event) {
+    let tasks = Array.from(JSON.parse(localStorage.getItem("tasks")));
+    tasks.forEach(task => {
+        if (task.task === event.parentNode.children[1].value) {
+            tasks.splice(tasks.indexOf(task), 1);
+        }
+    });
+    localStorage.setItem("tasks", JSON.stringify(tasks));
+    event.parentElement.remove();
+}
+
+var currentTask = null;
+
+function getCurrentTask(event) {
+    currentTask = event.value;
+}
+
+function editTask(event) {
+    let tasks = Array.from(JSON.parse(localStorage.getItem("tasks")));
+    if (event.value === "") {
+        alert("Task is empty!");
+        event.value = currentTask;
+        return;
+    }
+    tasks.forEach(task => {
+        if (task.task === event.value) {
+            alert("Task already exist!");
+            event.value = currentTask;
+            return;
+        }
+    });
+    tasks.forEach(task => {
+        if (task.task === currentTask) {
+            task.task = event.value;
+        }
+    });
+    localStorage.setItem("tasks", JSON.stringify(tasks));
+}

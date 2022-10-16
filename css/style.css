@@ -24,10 +24,10 @@ html,h1,h2,h3,h4,h5,h6,a{
 	color: black !important;
 }
 .navbar-collapse{
- justify-content: flex-end;
+	justify-content: flex-end;
 }
 .navbar-toggler{
-  background:#fff !important;
+	background:#fff !important;
 }
 .header{
 	position: relative;
@@ -45,11 +45,11 @@ html,h1,h2,h3,h4,h5,h6,a{
 	background: rgba(244, 244, 244, 0.164);
 }
 .description{
-    position: relative;
-    top: 30%;
-    margin: auto;
-    padding: 13em;
-
+	position: relative;
+	top: 30%;
+	margin: auto;
+	padding: 13em;
+	
 }
 .description h1{
 	color:#ffc107 ;
@@ -78,8 +78,8 @@ html,h1,h2,h3,h4,h5,h6,a{
 }
 .about img{
 	height: 100%;
-    width: 100%;
-    border-radius: 50%;
+	width: 100%;
+	border-radius: 50%;
 	padding-bottom: 3em;
 }
 .about span{
@@ -106,7 +106,7 @@ html,h1,h2,h3,h4,h5,h6,a{
 	
 	background-size: cover;
 	background-position: center;
-    position: relative;	
+	position: relative;	
 }
 .Portofolio h1{
 	color:#ffc107;
@@ -118,21 +118,21 @@ html,h1,h2,h3,h4,h5,h6,a{
 	line-height: 1.5;
 }
 .Portofolio img{
-	 height: 15rem;
-	 width: 100%;
-	 margin: 1em;
+	height: 15rem;
+	width: 100%;
+	margin: 1em;
 }
 .blog{
-    position: relative;
+	position: relative;
 	background-image: url('../images/Abstract\ 01.jpg');
 	
 	background-size: cover;
 	background-position: center;	
 }
 .blog h1{
-		color:#ffc107;
-		margin-bottom: 0em;	
-		text-align: center;
+	color:#ffc107;
+	margin-bottom: 0em;	
+	text-align: center;
 }
 .blog .print{
 	color:white;
@@ -161,12 +161,12 @@ html,h1,h2,h3,h4,h5,h6,a{
 	border-top-right-radius: 93%;
 	transition:.4s ease-in-out;
 	position: absolute;
-
+	
 }
 .team .item:hover .des{
 	height: 100%;
 	background:#ffc107;
-    position: absolute;
+	position: absolute;
 	width: 89%;
 	padding: 5em;
 	top: 0;
@@ -199,15 +199,72 @@ html,h1,h2,h3,h4,h5,h6,a{
 	color: #888;
 }
 .desct h1{
-		color:#ffc107;
-		margin-bottom: 0em;	
-		text-align: center;
+	color:#ffc107;
+	margin-bottom: 0em;	
+	text-align: center;
 }
 .desct p{
 	color:#f4f4f4;
 	font-size: 28px;
 	text-align: center;
 }
+
+.todo form button {
+	border: none;
+	color: white;
+	font-size: 25px;
+	font-weight: 600;
+	height: 42px;
+	width: 10%;
+}
+
+.todo ul {
+	list-style: none;
+	padding: 0;
+}
+
+.todo ul li {
+	padding: 10px;
+}
+
+.check {
+	width: 0.8em;
+	height: 0.8em;
+	cursor: pointer;
+	border-radius: 50%;
+	background-color: white;
+	border: 1px solid rgb(255, 255, 255);
+	-webkit-appearance: none;
+}
+
+.check:checked {
+	background-color: #212529;
+}
+
+.task {
+	font-size: 18px;
+	padding: 0 10px;
+	width: fit-content;
+	background: transparent;
+	border: none;
+	color: #fff;
+}
+
+.task:focus {
+	outline: none;
+}
+
+.todo ul li i {
+	float: right;
+	cursor: pointer;
+	margin-right: 10px;
+}
+
+.completed {
+	color: #212529;
+	text-decoration: line-through;
+}
+
 @media screen and (max-width: 920px){
 	.nav-link{
 		padding-left: 20px !important
