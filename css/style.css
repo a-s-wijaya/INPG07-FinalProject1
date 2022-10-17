@@ -3,11 +3,11 @@ body{
 	margin: 0;
 	background:#f4f4f4;
 }
-html,h1,h2,h3,h4,h5,h6,a{
-	font-family: "Raleway";
-}
 .navbar-nav a{
 	color: #f4f4f4;
+}
+p a{
+	text-decoration: none;
 }
 .navbar{
 	background:#212529d0;
@@ -275,6 +275,13 @@ html,h1,h2,h3,h4,h5,h6,a{
 
 @media screen and (max-width: 920px){
 	.nav-link{
-		padding-left: 20px !important
+		padding-left: 20px !important;
+		margin-bottom: 10px !important;
 	}	
+	.description{
+		padding-top: 50px;
+		padding-bottom: 75px;
+		padding-right: 0;
+		padding-left: 20px;
+	}
 }
